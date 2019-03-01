@@ -12,12 +12,14 @@ function createWindow () {
 	  width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: false, //jQuery
+      images: false
     },
   })
+	mainWindow.setFullScreen(true)
 
   // and load the index.html of the app.
-  mainWindow.loadURL('https://duckduckgo.com/')
+  mainWindow.loadURL('https://github.com/')
   mainWindow.webContents.on('dom-ready', function() {
     mainWindow.webContents.insertCSS('::-webkit-scrollbar { display: none; }')
   });
